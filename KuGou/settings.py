@@ -13,7 +13,7 @@ BOT_NAME = 'KuGou'
 
 SPIDER_MODULES = ['KuGou.spiders']
 NEWSPIDER_MODULE = 'KuGou.spiders'
-LOG_LEVEL = "WARNING"
+# LOG_LEVEL = "WARNING"
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 # USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36'
@@ -56,7 +56,7 @@ USER_AGENTS = [
         "(KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24"
 ]
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 # CONCURRENT_REQUESTS = 32
@@ -89,9 +89,9 @@ ROBOTSTXT_OBEY = True
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
-# DOWNLOADER_MIDDLEWARES = {
-#    'KuGou.middlewares.KugouDownloaderMiddleware': 543,
-# }
+DOWNLOADER_MIDDLEWARES = {
+   'KuGou.middlewares.KugouDownloaderMiddleware': 543,
+}
 
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
